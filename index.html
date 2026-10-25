@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Cities Health Finder – Islamabad &amp; Rawalpindi</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Twin Cities Health Finder</h1>
+    <p>Hospitals, clinics and pharmacies in Islamabad &amp; Rawalpindi · live from OpenStreetMap (Overpass API)</p>
+  </div>
+  <div class="stats" id="stats" aria-live="polite"></div>
+</header>
+<main>
+  <aside>
+    <div class="controls">
+      <div><label for="city">City</label>
+        <select id="city"><option value="both">Islamabad + Rawalpindi</option><option value="isb">Islamabad</option><option value="rwp">Rawalpindi</option></select></div>
+      <div><label>Facility type</label>
+        <div class="types" id="types"></div></div>
+      <div><label for="q">Search by name</label><input type="search" id="q" placeholder="e.g. PIMS, Shifa, Fazal"></div>
+      <div class="row"><button id="load">Fetch data</button><button class="ghost" id="csv">Export CSV</button></div>
+    </div>
+    <div id="status">Press “Fetch data” to load facilities.</div>
+    <ul id="list" aria-label="Facilities"></ul>
+  </aside>
+  <div id="map" role="application" aria-label="Map of healthcare facilities"></div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
